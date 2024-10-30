@@ -14,36 +14,44 @@
     <body class="w-screen h-screen bg-cover bg-center" style="background-image: url('asset/background.jpeg');">
 
     <!-- NAV BAR -->
-    <div class="bg-gray-400 bg-opacity-20">
-        <nav class="flex justify-between items-center p-4">
-            <!-- Left aligned "Menu" -->
-            <div class="text-left">
-                <a href="#">Menu</a>
+    <div class="bg-black text-xl text-white bg-opacity-30 font-semibold">
+        <nav class="flex justify-between items-center">
+            <!-- Left aligned Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="asset/cinamon.png" class="w-24 ml-4">
+                <img src="asset/cinamon1.png" class="w-20">
             </div>
-    
             <!-- Center aligned navigation links -->
             <div class="flex space-x-16">
-                <a href="#">Home</a>
-                <a href="#">Song</a>
-                <a href="#">More</a>
+                <a href="#">
+                    <i class="fa-solid fa-house mr-2"></i>
+                    Home</a>
+                <a href="#">
+                    <i class="fa-solid fa-music mr-2"></i>
+                    Song</a>
+                <a href="#">
+                    <i class="fa-solid fa-info mr-2"></i>
+                    More</a>
             </div>
     
-            <!-- Right aligned "Login/Logout" -->
-            <div class="text-right">
-                <a href="#">Login/Logout</a>
+            
+            <!-- Right aligned "Menu" -->
+            <div class="flex items-center px-8 space-x-2">
+                <i class="fa-solid fa-bars"></i>
+                <a href="#">Menu</a>
             </div>
         </nav>
     </div>
 
     <!-- Main content container -->
-    <div class="flex h-full p-6">
+    <div class="flex h-1/2 p-6 w-1/6">
         <!-- Music player container on the left -->
-        <div class="w-1/4 bg-gray-400 bg-opacity-20 p-4 rounded-lg shadow-lg flex flex-col">
+        <div class="bg-black bg-opacity-30 p-4 rounded-lg shadow-lg flex flex-col">
             <div class="Placeholder mb-4">
-                <h2 class="text-xl font-bold text-center">Music Player</h2>
+                <h2 class="text-xl font-bold text-center text-white">Music Player~</h2>
             </div>
             <div class="Playerimage mb-4 flex items-center justify-center">
-                <img src="asset/player_image1.jpeg" class="w-32 h-32 object-cover" alt="Image">
+                <img src="asset/player_image1.jpeg" class="w-32 h-32 object-cover border-2 rounded-md" alt="Image">
             </div>
             <!-- Song name -->
             <div class="flex justify-center text-white">
@@ -61,18 +69,34 @@
                 <input type="range" id="progress-bar" class="w-full" value="0" max="100">
                 <span id="duration">0:00</span>
             </div>
-            <div id="playlist" class="space-y-2">
-                <!-- Playlist items will be added here via JavaScript -->
+
+            <!-- Image -->
+            <div class="flex space-x-4 border-2 border-black border-opacity-0 rounded-md p-4">
+                <img src="asset/player_image2.jpeg" class="w-16 h-16 object-cover border-2 rounded-md" alt="Image">
+                <div class="text-white flex-col justify-between items-center">
+                    <h2 class="text-white">Song Name</h2>
+                    <button class="flex items-center w-full border-2 rounded-lg px-2 space-x-4 mt-3">
+                        <i class="fa-solid fa-forward"></i>
+                        <h3 class="">Skip</h3>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
     
-    
-        <!-- Placeholder for additional content on the right -->
-        <div class="flex-1 p-6">
-            <!-- Additional content can go here -->
-        </div>
+    <!-- Plane at bottom -->
+    <div id="planeModal" class="hidden"></div>
+    <img src="asset/cina_plane.png" class="w-32 absolute bottom-0 left-16 mb-4 cursor-pointer" alt="plane" id="plane">
+
+    <!-- Speech bubble positioned relative to the plane, without the tail -->
+    <div id="speechBubble" class="hidden absolute my-8 bottom-24 left-16 bg-white text-black font-bold p-2 rounded-lg shadow-lg">
+        Hi!
     </div>
+
+
+
+
+
     
 
 
